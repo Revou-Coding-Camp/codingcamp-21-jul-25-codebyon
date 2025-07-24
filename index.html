@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Yonathan</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Todo List</h1>
+            
+            <div class="todo-container">
+    <h2>Todo List</h2>
+    <form class="todo-form" id="todo-form">
+      <input type="text" id="todo-input" placeholder="Add task ...." required />
+      <input type="date" id="todo-date" required />
+      <button type="submit" class="add-btn">+</button>
+    </form>
+
+    <div class="action-buttons">
+      <button class="filter-btn">FILTER</button>
+      <button class="delete-btn" id="delete-all">DELETE ALL</button>
+    </div>
+
+    <table class="todo-table">
+      <thead>
+        <tr>
+          <th>TASK</th>
+          <th>DUE DATE</th>
+          <th>STATUS</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody id="todo-body">
+        <tr><td colspan="4" class="no-task">No task found</td></tr>
+      </tbody>
+    </table>
+  </div>
+        </header>
+    </main>
+    
+    <!-- JavaScript External -->
+    <script src="js/script.js"></script>
+</body>
+    
+</html>
