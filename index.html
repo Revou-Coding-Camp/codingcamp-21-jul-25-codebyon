@@ -2,51 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List - Yonathan</title>
-
-    <!-- CSS External -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List - Yonathan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <main>
-        <header>
-            <h1>Todo List</h1>
-            
-            <div class="todo-container">
-    <h2>Todo List</h2>
-    <form class="todo-form" id="todo-form">
-      <input type="text" id="todo-input" placeholder="Add task ...." required />
-      <input type="date" id="todo-date" required />
-      <button type="submit" class="add-btn">+</button>
-    </form>
+  <main>
+    <header>
+      <div class="todo-container">
+        <h1>Todo List</h1>
+        <form class="todo-form" id="todo-form">
+          <input type="text" id="todo-input" placeholder="Add your task ...." required />
+          <input type="date" id="todo-date" required />
+          <button type="submit" class="add-btn" title="Add">+</button>
+        </form>
 
-    <div class="action-buttons">
-      <button class="filter-btn">FILTER</button>
-      <button class="delete-btn" id="delete-all">DELETE ALL</button>
-    </div>
+        <div class="action-buttons">
+          <div class="dropdown">
+            <button class="filter-btn">FILTER</button>
+            <div class="dropdown-content">
+              <button onclick="sortTodos('task-asc')">Task: A-Z</button>
+              <button onclick="sortTodos('task-desc')">Task: Z-A</button>
+              <button onclick="sortTodos('date-asc')">Date: Oldest-Newest</button>
+              <button onclick="sortTodos('date-desc')">Date: Newest-Oldest</button>
+            </div>
+          </div>
+          <button class="delete-btn" id="delete-all">DELETE ALL</button>
+        </div>
 
-    <table class="todo-table">
-      <thead>
-        <tr>
-          <th>TASK</th>
-          <th>DUE DATE</th>
-          <th>STATUS</th>
-          <th>ACTIONS</th>
-        </tr>
-      </thead>
-      <tbody id="todo-body">
-        <tr><td colspan="4" class="no-task">No task found</td></tr>
-      </tbody>
-    </table>
-  </div>
-        </header>
-    </main>
-    
-    <!-- JavaScript External -->
-    <script src="js/script.js"></script>
+        <table class="todo-table">
+          <thead>
+            <tr>
+              <th>TASK</th>
+              <th>DATE</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="todo-body">
+            <tr><td colspan="4" class="no-task">No task found</td></tr>
+          </tbody>
+        </table>
+
+        <footer style="text-align: center; margin-top: 20px; color: #333333; font-size: 0.9rem;">
+        &copy; 2025 Yonathan Auditya. All rights reserved.
+        </footer>
+
+      </div>
+    </header>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
-    
+
 </html>
